@@ -1,0 +1,39 @@
+.userItem {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid #c8c8c8;
+    height: 45px;
+}
+
+.userItemHeader {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: darkolivegreen;
+    border-radius: 5px;
+}
+
+.pddingZero {
+    padding: 0px;
+}
+
+.marginZero {
+    margin: 0px;
+}
+
+.loading {
+    position: fixed;
+    top: 90px;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 9999999;
+    opacity: 100%;
+    width: 100px;
+}
+
+.disableView {
+    opacity: 50%;
+}

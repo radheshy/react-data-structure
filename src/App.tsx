@@ -11,7 +11,7 @@ function App() {
       <main>
         <AppRoutes /> {/* Page content changes with route */}
       </main>
-      <footer>© 2025 Data structure</footer>
+      {/* <footer>© 2025 Data structure</footer> */}
     </BrowserRouter>
   )
 }
