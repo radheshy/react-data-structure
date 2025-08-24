@@ -5,7 +5,7 @@ type UserListType = {
 }
 
 type UserListComponentType = {
-    type: "Promise"| "Async/Await";
+    type: "Promise" | "Async/Await" | "Redux" | "RTK";
     userList: UserListType[];
     reload: () => void;
     loading: boolean;

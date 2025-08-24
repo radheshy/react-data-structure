@@ -14,7 +14,7 @@ export default function Header() {
           <button onClick={() => dispatch(logout())}>Logout</button>
         </div>
       ) : (
-        <button onClick={() => dispatch(login("Radheshyam"))}>Login</button>
+        <button onClick={() => dispatch(login("Radheshyam Kumar"))}>Login</button>
       )}
     </header>
   );

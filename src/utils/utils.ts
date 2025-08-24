@@ -1,4 +1,6 @@
-const formatData = (users: any[]) => {
+import type { UserListType } from "../types/user"
+
+const formatData = (users: any[]): UserListType[] => {
     return users.map((user: any) => {
         return {
             id: user.id,

@@ -10,7 +10,7 @@ const UserList = ({type, userList, reload, loading}: UserListComponentType) => {
                     <h3>{type} User List</h3>
                     <button onClick={() => reload()}>Reload</button>
                 </div>
-                { !loading && userList.length == 0 && <div className={`${styles.userItemHeader}`}>{type} data not available.</div>}
+                { !loading && userList?.length == 0 && <div className={`${styles.userItemHeader}`}>{type} data not available.</div>}
                 { userList?.map((user) => (
                     <div key={user.id} className={`${styles.userItem}`}>
                         <h3 className={`${styles.pddingZero}`}>{user.name}</h3>
