@@ -1,0 +1,58 @@
+🔹 Interview Q&A: Event Loop & Execution Context in React + TypeScript
+Q1. What is the Execution Context in JavaScript?
+
+Answer:
+Execution Context is the environment in which JavaScript code runs. There are two main types:
+
+Global Execution Context – created when the file starts running.
+
+Function Execution Context – created whenever a function is invoked.
+
+Each context has:
+
+Variable Environment (variables, functions)
+
+Lexical Environment (scope chain, closures)
+
+this binding
+
+Q2. Explain the Event Loop in JavaScript.
+
+Answer:
+The Event Loop is a mechanism that allows JavaScript (single-threaded) to handle asynchronous operations.
+
+Call Stack executes synchronous code.
+
+Web APIs (like setTimeout, DOM events, fetch) register async tasks.
+
+Callback Queue (Macrotask Queue) stores tasks like setTimeout, setInterval.
+
+Microtask Queue stores promises, mutation observers (executed before macrotasks).
+
+Event Loop continuously checks:
+
+If Call Stack is empty → push all microtasks first → then move macrotasks.
+
+Q3. What’s the difference between useLayoutEffect and useEffect in this context?
+
+Answer:
+
+useLayoutEffect: runs synchronously after DOM mutations but before paint.
+
+useEffect: runs asynchronously after paint.
+
+If you had used useLayoutEffect, "useEffect executed" would appear before Promise and setTimeout.
+
+Q4. Why does React state with Set need cloning instead of direct mutation?
+
+Answer:
+React relies on immutable state updates.
+If you mutate a Set directly and return the same reference, React won’t detect a change and will not re-render.
+
+✅ Correct way:
+
+setLogs((prev) => new Set(prev).add(log));
+
+Q5. Write a React + TS demo to visualize Event Loop logs.
+
+Check the EventLoopDemo.tsx

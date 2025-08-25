@@ -24,6 +24,7 @@ export default function Header() {
           <li className={`${styles.link}`}><a href="/asyncAwait">Async/Await</a></li>
           <li className={`${styles.link}`}><a href="/reduxPlusRTK">Redux/RTK</a></li>
           <li className={`${styles.link}`}><a href="/clouserPlusPrototype">Clouser/Prototype</a></li>
+          <li className={`${styles.link}`}><a href="/eventLoop">Event/Loop</a></li>
         </ul>
       </nav>
     </header>
