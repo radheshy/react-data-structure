@@ -3,6 +3,8 @@ import { getUsersAsync } from "./userService";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { UserListType } from "../types/user";
 import { formatData } from "../utils/utils";
+import type { UserType1 } from "../pages/ClouserPlusPrototype/User1";
+import { createUsers } from "./factory/userFactory";
 
 // Reducer part
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async() => {
@@ -46,6 +48,12 @@ export const usersApi = createApi({
         baseUrl: "https://jsonplaceholder.typicode.com/"
     }),
     endpoints: (builder) => ({
+        getRawUsers: builder.query<UserType1[], void>({
+            query: () => "users",
+            transformResponse: (response: any) : UserType1[] => {
+               return createUsers(response);
+            }
+        }),
         getUsers: builder.query<UserListType[], void>({
             query: () => "users",
             transformResponse: (response: any): UserListType[] => {
@@ -56,7 +64,7 @@ export const usersApi = createApi({
 })
 
 // RTK export
-export const { useGetUsersQuery } = usersApi;
+export const {useGetRawUsersQuery, useGetUsersQuery } = usersApi;
 
 // Reducer export
 export default userSlice.reducer;

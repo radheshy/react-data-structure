@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, About, AsyncAwait, ReduxPlusRTK } from "../pages";
+import { Home, About, AsyncAwait, ReduxPlusRTK, ClouserPlusPrototype } from "../pages";
 
 export default function AppRoutes() {
   return (
@@ -8,6 +8,7 @@ export default function AppRoutes() {
       <Route path="/about" element={<About />} />
       <Route path="/asyncAwait" element={<AsyncAwait />} />
       <Route path="/reduxPlusRTK" element={<ReduxPlusRTK />} />
+      <Route path="/clouserPlusPrototype" element={<ClouserPlusPrototype />} />
     </Routes>
   );
 }

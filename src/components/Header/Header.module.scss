@@ -6,9 +6,27 @@
     font-size: 18px;
     background-color: darkolivegreen;
     border-radius: 5px;
-    display: flex
+    display: flex;
+    justify-content: space-between;
 }
 
 .itemFlex {
     display: flex;
+}
+
+.link {
+    width: auto;
+    height: 30px;
+    background: brown;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+
+    a {
+         text-decoration: none;
+         color: #c8c8c8;
+         align-items: center;
+         font-size: 14px;
+         font-weight: 400;
+         vertical-align: sub;
+    }
 }

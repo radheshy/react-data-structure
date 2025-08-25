@@ -1,0 +1,37 @@
+🚀 Question
+
+You are asked to build a small React app that demonstrates:
+
+Prototypes:
+Create a User constructor function with prototype methods getFullName() and getEmail().
+Use it to generate a list of users and display them in the UI.
+
+Closures:
+Add a button for each user that increments their personal "click counter".
+Use a closure to maintain each user’s counter, so the count persists between clicks without storing it in React state.
+
+Event Bubbling:
+Create a parent <div> that listens for click events on all user items using event bubbling.
+When a user item is clicked, log the id of that user to the console via the parent handler (not on the child).
+
+Expected Flow:
+
+On page load, render a list of users from your prototype.
+
+Each user has:
+
+Full name (from prototype).
+
+Email (from prototype).
+
+A button that shows "Clicked X times" (count stored via closure).
+
+Clicking on the user’s area triggers the parent div’s event bubbling handler.
+
+🎯 Interview Evaluation Criteria
+
+Prototypes: Did you attach methods to the prototype instead of defining them inside the constructor?
+
+Closures: Is the counter stored without relying on React state?
+
+Event Bubbling: Is the parent capturing child clicks properly?
