@@ -1,10 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from "node:url";
+import tailwindcss from '@tailwindcss/vite'
+
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),  tailwindcss()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '', // optional global imports
+      },
+    },
+  },
   resolve: {
     alias: {
       "@components": fileURLToPath(new URL("./src/components", import.meta.url)),

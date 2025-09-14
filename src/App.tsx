@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header /> {/* Always visible */}
-      <main>
+      <main style={{margin: '10px'}}>
         <AppRoutes /> {/* Page content changes with route */}
       </main>
       {/* <footer>© 2025 Data structure</footer> */}

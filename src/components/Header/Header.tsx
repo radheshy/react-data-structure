@@ -11,11 +11,11 @@ export default function Header() {
       <div>
         {isLoggedIn ? (
           <div className={`${styles.itemFlex}`}>
-            <p>Welcome, {name}!</p>
-            <button onClick={() => dispatch(logout())}>Logout</button>
+            <p className={`${styles.margitnLeft}`}>Welcome, {name}!</p>
+            <button className={`${styles.btn}`} onClick={() => dispatch(logout())}>Logout</button>
           </div>
         ) : (
-          <button onClick={() => dispatch(login("Radheshyam Kumar"))}>Login</button>
+          <button className={`${styles.btn}`} onClick={() => dispatch(login("Radheshyam Kumar"))}>Login</button>
         )}
       </div>
       <nav style={{marginRight: '15px'}}>
@@ -25,6 +25,8 @@ export default function Header() {
           <li className={`${styles.link}`}><a href="/reduxPlusRTK">Redux/RTK</a></li>
           <li className={`${styles.link}`}><a href="/clouserPlusPrototype">Clouser/Prototype</a></li>
           <li className={`${styles.link}`}><a href="/eventLoop">Event/Loop</a></li>
+          <li className={`${styles.link}`}><a href="/dragdrop">Drag drop</a></li>
+          <li className={`${styles.link}`}><a href="/clock">Clock</a></li>
         </ul>
       </nav>
     </header>

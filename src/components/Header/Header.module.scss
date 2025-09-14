@@ -1,5 +1,5 @@
 .header {
-    width: 99%;
+    width: 99.2%;
     height: 60px;
     padding: 5px;
     align-items: center;
@@ -12,6 +12,7 @@
 
 .itemFlex {
     display: flex;
+    align-items: center;
 }
 
 .link {
@@ -29,4 +30,14 @@
          font-weight: 400;
          vertical-align: sub;
     }
+}
+
+.btn {
+    height: 35px;
+    width: auto;
+    margin-left: 15px;
+}
+
+.margitnLeft {
+    margin-left: 15px;
 }
